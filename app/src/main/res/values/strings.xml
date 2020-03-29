@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">project2-byoi-covid-local</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title1">COVID-19</string>
+    <string name="title2">Local News and Updates</string>
+    <string name="login">Log in</string>
+    <string name="signup">Sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="finda">Find a location...</string>
+</resources>
