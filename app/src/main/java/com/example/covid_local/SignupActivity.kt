@@ -58,7 +58,22 @@ class SignupActivity : AppCompatActivity() {
                     var firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
                     val fixedEmail = inputtedEmail.replace(".", "")
                     val reference = firebaseDatabase.getReference("users/$fixedEmail")
-                    reference.setValue(inputtedLocation)
+                    reference.setValue(inputtedLocation).addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            Toast.makeText(
+                                this,
+                                "Added to DB",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            val exception: Exception = it.exception!!
+                            Toast.makeText(
+                                this,
+                                "DB add failed: $exception",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
                     val user = firebaseAuth.currentUser
                     Toast.makeText(
                         this,
