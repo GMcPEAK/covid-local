@@ -11,4 +11,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="finda">Find a location...</string>
+    <string name="author">Author</string>
+    <string name="lorem_short">Lorem Ipsum Dolor Sit Amet</string>
+    <string name="lorem_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla sapien, fringilla vitae dui a, ultrices maximus mauris. Maecenas in fringilla enim, a consectetur libero. Pellentesque porttitor ut urna et sagittis. Aenean tellus ex, mollis ut ultrices et, consequat eget libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada metus turpis, at mattis nunc sodales quis. Nulla id est velit. Nulla placerat, tortor dapibus semper tincidunt, dui purus mattis ex, sit amet convallis nisl libero vel libero. Aliquam tristique enim id ex vulputate, id viverra metus euismod. Nullam vulputate augue suscipit, lobortis lectus et, imperdiet odio.</string>
 </resources>

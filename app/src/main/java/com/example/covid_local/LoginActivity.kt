@@ -1,6 +1,7 @@
 package com.example.covid_local
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -76,7 +77,9 @@ class LoginActivity : AppCompatActivity() {
                                 "Login successful",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            //TODO: send user to next screen
+                            //send user to next screen
+                            val intent = Intent(this@LoginActivity, NewsActivity::class.java)
+                            startActivity(intent)
                         }
                     })
                 } else {
