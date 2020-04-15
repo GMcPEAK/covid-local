@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         firebaseAuth = FirebaseAuth.getInstance()
         if (firebaseAuth.currentUser != null) {
-            //TODO: immediately send them to the home screen
+            //immediately send them to the home screen
+            val intent = Intent(this@MainActivity, NewsActivity::class.java)
+            startActivity(intent)
         }
     }
 

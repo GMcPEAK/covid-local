@@ -1,6 +1,7 @@
 package com.example.covid_local
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.*
@@ -73,6 +74,7 @@ class SignupActivity : AppCompatActivity() {
                                 Toast.LENGTH_LONG
                             ).show()
                         }
+
                     }
                     val user = firebaseAuth.currentUser
                     Toast.makeText(
@@ -80,7 +82,9 @@ class SignupActivity : AppCompatActivity() {
                         "Registered successfully",
                         Toast.LENGTH_SHORT
                     ).show()
-                    //TODO: send user to next screen
+                    //send user to next screen
+                    val intent = Intent(this@SignupActivity, NewsActivity::class.java)
+                    startActivity(intent)
                 } else {
                     val exception: Exception = task.exception!!
                     Toast.makeText(
