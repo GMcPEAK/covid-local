@@ -6,5 +6,6 @@ data class Story (
     val description: String,
     val url: String,
     val imgUrl: String,
-    val timeStamp: String
+    val timeStamp: String,
+    val source: String
 )
