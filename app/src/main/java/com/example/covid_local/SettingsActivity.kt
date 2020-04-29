@@ -111,10 +111,15 @@ class SettingsActivity : AppCompatActivity(){
         location.setAdapter(adapter)
 
         enterPass.setOnClickListener {
-            if (newPass1.toString() == newPass2.toString() && newPass1.toString() != oldPass.toString() && oldPass.toString() == preferences.getString("password", "")) {
+            if (newPass1.text.toString() == newPass2.text.toString() && newPass1.text.toString() != oldPass.text.toString() && oldPass.text.toString() == preferences.getString("password", "")) {
                 try {
-                    user?.updatePassword(newPass1.toString())
-                    preferences.edit().putString("password", newPass1.toString()).apply()
+                    user?.updatePassword(newPass1.text.toString())
+                    preferences.edit().putString("password", newPass1.text.toString()).apply()
+                    Toast.makeText(
+                        this,
+                        "Password update succeeded",
+                        Toast.LENGTH_LONG
+                    ).show()
                 } catch (e: Exception) {
                     Toast.makeText(
                         this,
@@ -124,21 +129,21 @@ class SettingsActivity : AppCompatActivity(){
                 }
             } else {
                 when {
-                    oldPass.toString() != preferences.getString("password", "") -> {
+                    oldPass.text.toString() != preferences.getString("password", "") -> {
                         Toast.makeText(
                             this,
                             "Password update failed: Old password is incorrect",
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                    newPass1.toString() == oldPass.toString() -> {
+                    newPass1.text.toString() == oldPass.toString() -> {
                         Toast.makeText(
                             this,
                             "Password update failed: New password is the same as the old password",
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                    newPass1.toString() != newPass2.toString() -> {
+                    newPass1.text.toString() != newPass2.toString() -> {
                         Toast.makeText(
                             this,
                             "Password update failed: New password and Confirm new password do not match",
